@@ -3,9 +3,7 @@ package com.example.pihut_android_animations
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import com.example.pihut_android_animations.sequence.SequenceFragment
-import kotlinx.android.synthetic.main.main_activity.*
+import com.example.pihut_android_animations.fragments.MenuFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,15 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         hideSystemUI()
 
-        tvSequence.setOnClickListener {
-            goto(SequenceFragment())
-        }
-    }
-
-    private fun goto(fragment: Fragment){
         supportFragmentManager.beginTransaction()
-            .replace(R.id.flContainer, fragment)
-            .addToBackStack(fragment::javaClass.name)
+            .replace(R.id.flContainer, MenuFragment())
             .commitAllowingStateLoss()
     }
 
