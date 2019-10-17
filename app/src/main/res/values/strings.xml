@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">android animations</string>
+
+    <string name="sequence">Sequence animation</string>
+    <string name="property">Property Animator</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+</resources>
