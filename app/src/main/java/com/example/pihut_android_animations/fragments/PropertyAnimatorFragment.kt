@@ -33,13 +33,13 @@ class PropertyAnimatorFragment : Fragment() {
         ivLogo.scaleX = 0.5f
         ivLogo.scaleY = 0.5f
 
-        val animationX = ObjectAnimator.ofFloat(ivLogo, "scaleX", 1F)
-        val animationY = ObjectAnimator.ofFloat(ivLogo, "scaleY", 1F)
+        val animationX = ObjectAnimator.ofFloat(ivLogo, "scaleX", 1f)
+        val animationY = ObjectAnimator.ofFloat(ivLogo, "scaleY", 1f)
 
         set = AnimatorSet()
         set.play(animationX)
             .with(animationY)
-        set.duration = 2000L
+        set.duration = 2000
         set.interpolator = ReverseInterpolator(DecelerateInterpolator())
         set.doOnEnd {
             if (isPlaying) {
