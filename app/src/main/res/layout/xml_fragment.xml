@@ -6,12 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:padding="@dimen/common_padding"
+    android:background="@color/white"
     >
 
-    <FrameLayout
-        android:id="@+id/flContainer"
+    <ImageView
+        android:id="@+id/ivRobot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/robot_2d"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -19,17 +23,24 @@
         />
 
     <TextView
-        android:id="@+id/tvBack"
+        style="@style/HeaderTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/xml"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvControl"
         style="@style/ButtonsTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/common_padding"
-        android:drawableStart="@drawable/arrow_left"
-        android:drawableTint="@color/button"
-        android:text="@string/back"
-        android:gravity="center"
+        android:text="@string/start"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.pihut_android_animations.utils
 
 import android.view.animation.Interpolator
+import kotlin.math.abs
 
 class ReverseInterpolator(private val mInterpolator: Interpolator) : Interpolator {
 
@@ -15,6 +16,6 @@ class ReverseInterpolator(private val mInterpolator: Interpolator) : Interpolato
         return if (input <= 0.5)
             input * 2
         else
-            Math.abs(input - 1) * 2
+            abs(input - 1) * 2
     }
 }

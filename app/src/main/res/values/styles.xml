@@ -1,11 +1,27 @@
 <resources>
 
     <!-- Base application theme. -->
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Text styles-->
+
+    <style name="HeaderTextStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/fredoka</item>
+        <item name="android:textColor">@color/header</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="ButtonsTextStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/fredoka</item>
+        <item name="android:textColor">@color/button</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>

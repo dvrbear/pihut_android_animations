@@ -1,20 +1,17 @@
 package com.example.pihut_android_animations.fragments
 
+import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.DecelerateInterpolator
-import androidx.core.animation.doOnEnd
 import androidx.fragment.app.Fragment
 import com.example.pihut_android_animations.R
-import com.example.pihut_android_animations.utils.ReverseInterpolator
 import kotlinx.android.synthetic.main.property_fragment.ivRobot
 import kotlinx.android.synthetic.main.sequence_fragment.tvControl
 
-class PropertyAnimatorFragment : Fragment() {
+class XMLAnimatorFragment : Fragment() {
 
     private var isPlaying = false
     private lateinit var set: AnimatorSet
@@ -24,7 +21,7 @@ class PropertyAnimatorFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.property_fragment, container, false)
+        return inflater.inflate(R.layout.xml_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -33,19 +30,14 @@ class PropertyAnimatorFragment : Fragment() {
         ivRobot.scaleX = 0.5f
         ivRobot.scaleY = 0.5f
 
-        val animationX = ObjectAnimator.ofFloat(ivRobot, "scaleX", 1f)
-        val animationY = ObjectAnimator.ofFloat(ivRobot, "scaleY", 1f)
-
-        set = AnimatorSet()
-        set.play(animationX)
-            .with(animationY)
-        set.duration = 2000
-        set.interpolator = ReverseInterpolator(DecelerateInterpolator())
-        set.doOnEnd {
-            if (isPlaying) {
-                set.start()
-            }
-        }
+        set = AnimatorInflater.loadAnimator(context, R.animator.animation) as AnimatorSet
+        set.setTarget(ivRobot)
+//        set.interpolator = ReverseInterpolator(DecelerateInterpolator())
+//        set.doOnEnd {
+//            if (isPlaying) {
+//                set.start()
+//            }
+//        }
 
         tvControl.setOnClickListener {
             switchState()

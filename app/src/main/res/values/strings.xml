@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">android animations</string>
+    <string name="app_name">Android Animation</string>
 
     <string name="sequence">Sequence animation</string>
     <string name="property">Property Animator</string>
+    <string name="xml">XML Animator</string>
+    <string name="vector">Vector transform</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
+    <string name="back">Back</string>
+    <string name="transform">Transform</string>
 </resources>

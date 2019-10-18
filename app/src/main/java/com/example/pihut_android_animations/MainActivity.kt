@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pihut_android_animations.fragments.MenuFragment
+import kotlinx.android.synthetic.main.main_activity.tvBack
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +17,10 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.flContainer, MenuFragment())
             .commitAllowingStateLoss()
+
+        tvBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun hideSystemUI() {

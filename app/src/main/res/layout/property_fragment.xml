@@ -11,7 +11,7 @@
     >
 
     <ImageView
-        android:id="@+id/ivLogo"
+        android:id="@+id/ivRobot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitCenter"
@@ -23,6 +23,7 @@
         />
 
     <TextView
+        style="@style/HeaderTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/property"
@@ -33,10 +34,10 @@
 
     <TextView
         android:id="@+id/tvControl"
+        style="@style/ButtonsTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start"
-        android:textAllCaps="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
