@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/ccRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="@dimen/common_padding"
+    android:background="@color/white"
+    >
+
+    <TextView
+        style="@style/HeaderTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transition"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.Placeholder
+        android:id="@+id/placeholder"
+        android:layout_width="@dimen/image_size_expanded"
+        android:layout_height="@dimen/image_size_expanded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="@dimen/image_size_expanded"
+        android:layout_height="@dimen/image_size_expanded"
+        app:srcCompat="@drawable/robot_2d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/iv2"
+        />
+
+    <ImageView
+        android:id="@+id/iv2"
+        android:layout_width="@dimen/image_size_expanded"
+        android:layout_height="@dimen/image_size_expanded"
+        app:srcCompat="@drawable/avd_favorite_to_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/iv3"
+        />
+
+    <ImageView
+        android:id="@+id/iv3"
+        android:layout_width="@dimen/image_size_expanded"
+        android:layout_height="@dimen/image_size_expanded"
+        app:srcCompat="@drawable/android_logo_3d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/iv4"
+        />
+
+    <ImageView
+        android:id="@+id/iv4"
+        android:layout_width="@dimen/image_size_expanded"
+        android:layout_height="@dimen/image_size_expanded"
+        app:srcCompat="@drawable/snowflake"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/iv5"
+        />
+
+    <ImageView
+        android:id="@+id/iv5"
+        android:layout_width="@dimen/image_size_expanded"
+        android:layout_height="@dimen/image_size_expanded"
+        app:srcCompat="@drawable/santa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.menu_fragment.tvChange
 import kotlinx.android.synthetic.main.menu_fragment.tvDraw
 import kotlinx.android.synthetic.main.menu_fragment.tvProperty
 import kotlinx.android.synthetic.main.menu_fragment.tvSequence
+import kotlinx.android.synthetic.main.menu_fragment.tvTransition
 import kotlinx.android.synthetic.main.menu_fragment.tvVector
 import kotlinx.android.synthetic.main.menu_fragment.tvXML
 
@@ -48,6 +49,10 @@ class MenuFragment: Fragment(){
 
         tvDraw.setOnClickListener {
             goto(DrawFragment())
+        }
+
+        tvTransition.setOnClickListener {
+            goto(TransitionFragment())
         }
     }
 

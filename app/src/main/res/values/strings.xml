@@ -5,6 +5,7 @@
     <string name="property">Property Animator</string>
     <string name="xml">XML Animator</string>
     <string name="vector">Vector transform</string>
+    <string name="transition">Transition animation</string>
     <string name="layout_changes">Layout change</string>
     <string name="draw">Draw animation</string>
     <string name="start">Start</string>
