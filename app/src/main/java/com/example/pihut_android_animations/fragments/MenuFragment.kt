@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.pihut_android_animations.R
 import kotlinx.android.synthetic.main.menu_fragment.tvChange
+import kotlinx.android.synthetic.main.menu_fragment.tvDraw
 import kotlinx.android.synthetic.main.menu_fragment.tvProperty
 import kotlinx.android.synthetic.main.menu_fragment.tvSequence
 import kotlinx.android.synthetic.main.menu_fragment.tvVector
@@ -43,6 +44,10 @@ class MenuFragment: Fragment(){
 
         tvChange.setOnClickListener {
             goto(LayoutChangesFragment())
+        }
+
+        tvDraw.setOnClickListener {
+            goto(DrawFragment())
         }
     }
 

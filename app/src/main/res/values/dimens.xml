@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="common_padding">20dp</dimen>
+    <dimen name="max_snowflake_size">50dp</dimen>
+    <dimen name="max_snowflake_speed">2dp</dimen>
+    <dimen name="image_size_collapsed">48dp</dimen>
+    <dimen name="image_size_expanded">200dp</dimen>
 </resources>
