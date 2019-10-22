@@ -13,9 +13,13 @@ import kotlinx.android.synthetic.main.transition_fragment.iv2
 import kotlinx.android.synthetic.main.transition_fragment.iv3
 import kotlinx.android.synthetic.main.transition_fragment.iv4
 import kotlinx.android.synthetic.main.transition_fragment.iv5
+import kotlinx.android.synthetic.main.transition_fragment.ivEmpty
 import kotlinx.android.synthetic.main.transition_fragment.placeholder
 
 class TransitionFragment : Fragment() {
+
+    private var current = 0
+    private var empty = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,16 +32,24 @@ class TransitionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        iv1.setOnClickListener { swapView(iv1) }
-        iv2.setOnClickListener { swapView(iv2) }
-        iv3.setOnClickListener { swapView(iv3) }
-        iv4.setOnClickListener { swapView(iv4) }
-        iv5.setOnClickListener { swapView(iv5) }
+        iv1.setOnClickListener { swapView(iv1.id) }
+        iv2.setOnClickListener { swapView(iv2.id) }
+        iv3.setOnClickListener { swapView(iv3.id) }
+        iv4.setOnClickListener { swapView(iv4.id) }
+        iv5.setOnClickListener { swapView(iv5.id) }
+
+        empty = ivEmpty.id
+        swapView(empty)
     }
 
-    private fun swapView(view: View) {
+    private fun swapView(clicked: Int) {
         TransitionManager.beginDelayedTransition(ccRoot)
-        placeholder.setContentId(view.id)
+
+        current = when{
+            clicked != current && clicked != empty -> clicked
+            else -> empty
+        }
+        placeholder.setContentId(current)
     }
 
 }
