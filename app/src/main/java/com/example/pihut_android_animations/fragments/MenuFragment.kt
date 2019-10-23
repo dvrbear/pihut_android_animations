@@ -58,7 +58,12 @@ class MenuFragment: Fragment(){
 
     private fun goto(fragment: Fragment){
         fragmentManager?.beginTransaction()!!
-            .setCustomAnimations(R.animator.anim_fade_in, R.animator.anim_fade_out, R.animator.anim_fade_in, R.animator.anim_fade_out)
+            .setCustomAnimations(
+                R.animator.anim_fade_in,
+                R.animator.anim_fade_out,
+                R.animator.anim_fade_in,
+                R.animator.anim_fade_out
+            )
             .replace(R.id.flContainer, fragment)
             .addToBackStack(fragment::javaClass.name)
             .commitAllowingStateLoss()
